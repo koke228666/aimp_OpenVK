@@ -1,6 +1,7 @@
 build/
 .vscode
 __history
+__recovery
 *.delphilsp.json
 *.local
 *.identcache

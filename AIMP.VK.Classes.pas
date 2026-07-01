@@ -441,7 +441,7 @@ end;
 
 function TVKAudio.GetRealLink: string;
 begin
-  Result := 'https://vk.com/audio' + GetAPIPairs;
+  Result := 'https://api.openvk.org/audio' + GetOwnerAndAudioIDPair {GetAPIPairs};
 end;
 
 { TVKAudios }

@@ -76,7 +76,7 @@ type
     function Read(Data: PByte; Count: Cardinal): Integer; stdcall;
     function Seek(const Offset: Int64; Mode: Integer): HRESULT; stdcall;
     function SetSize(const Value: Int64): HRESULT; stdcall;
-    function Write(Buffer: PByte; Count: Cardinal; Written: PDWORD = nil): HRESULT; stdcall;
+    function Write(Buffer: PByte; Count: LongWord; Written: PLongWord = nil): HRESULT; stdcall;
   public
     constructor Create(const AFileURI: string);
     destructor Destroy; override;
@@ -294,7 +294,7 @@ begin
   Result := E_NOTIMPL;
 end;
 
-function TAIMPVKDownloadDropSourceStream.Write(Buffer: PByte; Count: Cardinal; Written: PDWORD): HRESULT;
+function TAIMPVKDownloadDropSourceStream.Write(Buffer: PByte; Count: LongWord; Written: PLongWord = nil): HRESULT; stdcall;
 begin
   Result := E_NOTIMPL;
 end;

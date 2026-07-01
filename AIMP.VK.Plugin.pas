@@ -134,7 +134,7 @@ begin
     AIMP_PLUGIN_INFO_NAME:
       Result := PWideChar('VK Plugin ' + FormatPluginVersion);
     AIMP_PLUGIN_INFO_SHORT_DESCRIPTION:
-      Result := 'Provides an ability to play music from VK.com';
+      Result := 'Provides an ability to play music from OpenVK';
     AIMP_PLUGIN_INFO_AUTHOR:
       Result := 'Keller';
   else

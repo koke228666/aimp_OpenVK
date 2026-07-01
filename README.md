@@ -30,6 +30,6 @@
 + Internet Explorer (используется авторизации)
 
 **Для сборки плагина, необходимы:**
-+ [AIMP SDK](https://www.aimp.ru/?do=download&os=windows&cat=sdk)
-+ [ACL](https://github.com/ArtemIzmaylov/ACL)
-+ [Delphi 10.4 Sydney или новее](https://www.embarcadero.com/ru/products/delphi) (в ACL используются новые возможности языка)
++ [AIMP SDK](https://www.aimp.ru/?do=download&os=windows&cat=sdk) - можно использовать самый последний
++ [ACL](https://github.com/ArtemIzmaylov/ACL/commit/2db44d774a5d56175ac73d1730970e3fc2fa1e44) - конкретно данный коммит, выше выпилен `TACLHttpClient`
++ [Delphi 11 (28.0.48361.3236) или новее](https://www.embarcadero.com/ru/products/delphi)

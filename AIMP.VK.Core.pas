@@ -36,7 +36,7 @@ uses
   ACL.Web.Http;
 
 const
-  sVKCallback = 'https://oauth.vk.com/blank.html';
+  sVKCallback = 'https://api.openvk.org/blank.html';
 
 type
   TVKLoadFromNodeProc = procedure (ANode: TACLXMLNode) of object;
@@ -316,10 +316,11 @@ end;
 function TVKService.AuthorizationGetURL(const ACallbackURL: string = ''): string;
 begin
   Result :=
-    'https://oauth.vk.com/authorize?' +
+    'https://api.openvk.org/authorize?' +
     'response_type=token&' +
     'client_id=' + IntToStr(AppID) + '&' +
-    'scope=' + FPemissions.ToString;
+    'scope=' + FPemissions.ToString + '&' +
+    'redirect_uri=https://api.openvk.org/blank.html';
 end;
 
 function TVKService.AuthorizationParseAnswer(const AAnswer: string): Boolean;
@@ -992,7 +993,7 @@ var
 begin
   ACmdLine := TStringBuilder.Create(256);
   try
-    ACmdLine.Append('https://api.vk.com/method/');
+    ACmdLine.Append('https://api.openvk.org/method/');
     ACmdLine.Append(AMethod);
     ACmdLine.Append('?access_token=');
     ACmdLine.Append(Token);

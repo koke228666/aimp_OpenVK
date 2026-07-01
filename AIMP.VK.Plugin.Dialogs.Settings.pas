@@ -210,7 +210,7 @@ begin
 
   L1.Visible := Owner.Service.IsAuthorized;
   L1.Caption := Format(LangLoadString(sLangSection + 'L1'), [AUserName]);
-  L1.URL := 'https://vk.com/id' + IntToStr(Owner.Service.UserID);
+  L1.URL := 'https://api.openvk.org/id' + IntToStr(Owner.Service.UserID);
 end;
 
 procedure TfrmVKSettings.UpdateCacheSize;
